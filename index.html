@@ -8,32 +8,56 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
     <div class="wrapper">
         <div class="container">
             
             <div>
-                <label for="user-name">Nome e Cognome</label>
-                <input type="text" id="user-name">
+                <div>
+                    <div>Nome e cognome</div>
+                    <input type="text" id="user-name" >
+                </div>
                 
-                <label for="kilometers">Km da percorrere</label>
-                <input type="text" id="kilometers">
+                <div>
+                    <div class="name">Km da percorrere</div>
+                    <input type="text" id="kilometers">
+                </div>
                 
-                
-                <label for="user-age">Fascia d'età</label>
-                <select id="user-age">
-                    <option value=""></option>
-                    <option value="maggiorenne">maggiorenne</option>
-                    <option value="minorenne">minorenne</option>
-                    <option value="over-65">over-65</option>
-                </select>
-                
-                <button id="submit-btn">genera</button>
-                <button id="cancel">Annulla</button>
+                <div>
+
+                    <div>Età</div>
+                    <input type="text" id="user-age">
+                </div>
+                <div>
+                    <button id="submit-btn">genera</button>
+                    <button id="cancel">Annulla</button>
+                </div>
             </div>
-            <h1 id="result"></h1>
         </div>
-        <div class="container"></div>
+
+        <div class="container">
+            <div>
+                <h3>NOME DEL PASSEGERO</h3>
+                <div id="name"></div>
+            </div>
+            <divS>
+                <div>
+                    <h4>offerta</h4>
+                    <span id="ticket"></span>
+                </div>
+                <div>
+                    <h4>Carrozza</h4>
+                    <span id="carriage"></span>
+                </div>
+                <div>
+                    <h4>Codice cp</h4>
+                    <div id="code"></div>
+                </div>
+                <div>
+                    <h4>Costo Biglietto</h4>
+                    <span id="price"></span>
+                </div>
+            </divS>
+        </div>
     </div>
     
 
