@@ -13,14 +13,11 @@ submitBtn.addEventListener("click", function() {
     console.log(kilometers, typeof(kilometers));
 
     const userAgeInput = document.getElementById("user-age");
-    const userAge = userAgeInput.value;
+    const userAge = parseInt(userAgeInput.value);
 
     console.log(userName, kilometers, userAge);
      
 //LOGICA
-
-    if (!isNaN(userAge) && !isNaN(kilometers)) {
-        console.log("è un numero puoi continuare");
 
         const price = kilometers * 0.21;
         console.log(price);
@@ -40,11 +37,6 @@ submitBtn.addEventListener("click", function() {
             ticketPrice = price;
             message = "biglietto standard";
         }
-        
-    } else {
-        console.log("non è un numero controlla le credenzali");
-    }
-        
         
         
     document.getElementById("name").innerHTML = userName;
