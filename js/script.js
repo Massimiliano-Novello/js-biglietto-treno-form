@@ -18,28 +18,35 @@ submitBtn.addEventListener("click", function() {
     console.log(userName, kilometers, userAge);
      
 //LOGICA
-    const price = kilometers * 0.21;
-    console.log(price);
 
-    let message = "";
-    let ticketPrice = "";
+    if (!isNaN(userAge) && !isNaN(kilometers)) {
+        console.log("è un numero puoi continuare");
 
-    if (userAge < 18) {
-        const discount = price * 0.20;
-        ticketPrice = discount;
-        message = "biglietto scontato del 20%";
-    } else if (userAge > 65) {
-        const over = price * 0.40;
-        ticketPrice = over;
-        message = "biglietto scontato del 40%";
+        const price = kilometers * 0.21;
+        console.log(price);
+        
+        let message = "";
+        let ticketPrice = "";
+        
+        if (userAge < 18) {
+            const discount = price * 0.20;
+            ticketPrice = discount;
+            message = "biglietto scontato del 20%";
+        } else if (userAge > 65) {
+            const over = price * 0.40;
+            ticketPrice = over;
+            message = "biglietto scontato del 40%";
+        } else {
+            ticketPrice = price;
+            message = "biglietto standard";
+        }
+        
     } else {
-        ticketPrice = price;
-        message = "biglietto standard";
+        console.log("non è un numero controlla le credenzali");
     }
-    
-
-    
-
+        
+        
+        
     document.getElementById("name").innerHTML = userName;
 
     document.getElementById("ticket").innerHTML = message;
@@ -52,6 +59,11 @@ submitBtn.addEventListener("click", function() {
 
     document.getElementById("price").innerHTML = ticketPrice;
 })
+
+const reset = document.getElementById("cancel");
+reset.addEventListener("click", function(){
+    
+});
 
 
 
