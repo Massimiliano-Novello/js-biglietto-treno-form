@@ -50,10 +50,24 @@ submitBtn.addEventListener("click", function() {
     document.getElementById("code").innerHTML = code;
 
     document.getElementById("price").innerHTML = ticketPrice;
+
+    userNameInput.value = "";
+    kilometersInput.value = "";
+    userAgeInput.value = "";
 })
 
 const reset = document.getElementById("cancel");
 reset.addEventListener("click", function(){
+    document.getElementById("name").innerHTML = "";
+    document.getElementById("ticket").innerHTML = "";
+    document.getElementById("carriage").innerHTML = "";
+    document.getElementById("code").innerHTML = "";
+    document.getElementById("price").innerHTML = "";
+
+
+    document.getElementById("user-name").value = "";
+    document.getElementById("kilometers").value = "";
+    document.getElementById("user-age").value = "";
     
 });
 
